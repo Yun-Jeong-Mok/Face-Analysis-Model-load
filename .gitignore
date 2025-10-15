@@ -1,0 +1,13 @@
+./images
+./images/*
+*./images
+*./images/*
+
+^.*
+
+cpp/cpp/
+cpp/x64/
+cpp/Debug/
+cpp/Release/
+cpp/.vs/
+
