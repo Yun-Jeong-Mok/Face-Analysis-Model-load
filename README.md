@@ -10,6 +10,7 @@
 .\vcpkg install curl:x64-windows opencv4:x64-windows
 
 - onnxruntime 라이브러리는 별도 설치 필요
+
 | https://github.com/microsoft/onnxruntime/releases 이동 후 
 onnxruntime-win-x64-1.23.1.zip 수동으로 다운, 압축 해제 후 lib 폴더와 include 폴더 안 파일들을 vcpkg 폴더 안으로 이동
 
