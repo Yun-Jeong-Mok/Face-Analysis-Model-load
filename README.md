@@ -16,10 +16,15 @@ onnxruntime-win-x64-1.23.1.zip 수동으로 다운, 압축 해제 후 lib 폴더
 
 - 프로젝트 -> CPP속성 -> VC++ 디렉터리 -> 일반 -> 포함 디렉터리에 vcpkg 폴더 추가 ( 라이브러리 연동 )
 
+25-10-18 (수정)
+- 임시 이미지 저장 폴더 -> R2 버킷 생성 후 연동
+- aws sdk 라이브러리(R2 api 연동용) 추가 (  vcpkg install aws-sdk-cpp[s3]  )
+- aws-cpp-sdk-core.dll, onnxruntime.pdb x64/Debug/ 밑에 복사
+
 ```
 ### 프로젝트 폴더 내 x64/Debug/ 안에 위치할 파일들 ( cpp.exe 있는 위치 )
 libcurl.dll, onnxruntime.dll, opencv_calib3d4.dll, opencv_core4.dll, opencv_dnn4.dll
-opencv_highgui4.dll, opencv_imagcodecs4.dll, openvideo4.dll, opencv_videoio4.dll
+opencv_highgui4.dll, opencv_imagcodecs4.dll, openvideo4.dll, opencv_videoio4.dll, aws-cpp-sdk-core.dll, onnxruntime.pdb
 ```
 
 참고 - 전체 프로젝트 폴더 https://drive.google.com/file/d/119Kr_EhTwOkuqjo_PAql4oxZJhKCw2Cm/view?usp=drive_link 
