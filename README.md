@@ -1,5 +1,6 @@
 # 클라우드 저장소(R2)에서 모델 불러오기
 ---
+| Cloudflare에 2개 버킷 생성 (AI용, 이미지 저장용)
 
 ### 환경 설정
 - Visual studio 2022 IDE ( 프로젝트 구성-Release 플랫폼-x64 C++ 언어 표준-ISO C++17 표준 )
@@ -27,11 +28,12 @@ libcurl.dll, onnxruntime.dll, opencv_calib3d4.dll, opencv_core4.dll, opencv_dnn4
 opencv_highgui4.dll, opencv_imagcodecs4.dll, openvideo4.dll, opencv_videoio4.dll, aws-cpp-sdk-core.dll, onnxruntime.pdb
 ```
 
-참고 - 전체 프로젝트 폴더 https://drive.google.com/file/d/119Kr_EhTwOkuqjo_PAql4oxZJhKCw2Cm/view?usp=drive_link 
+참고 - cpp 코드 전체 프로젝트 폴더 
+- https://drive.google.com/file/d/1YU1OPh4mYyL1pg67jcE4ND1vT-fNxJV2/view?usp=sharing
 
 ## 코드 설명
 
 - Cloudfare 객체 저장소인 R2에 FaceAnaysis 모델 보관
 - 파이썬과 C++을 통해 메모리로 모델을 직접 저장하지 않고 동작 시에만 메모리에 로드, 종료 시 초기화
-- 등록 시 JPG 형식으로 현재 시간값을 부여해 이미지 폴더에 저장 ( DB 연동 전 임시 테스트 용도 )
-- 조회 시 이미지 폴더에 있는 이미지들에서 임베딩 추출해 현재 카메라에 잡힌 얼굴 임베딩과 비교 검증
+- 등록 시 JPG 형식으로 현재 시간값을 부여해 ~~이미지 폴더에 저장 ( DB 연동 전 임시 테스트 용도 )~~ R2 images 버킷 안 faces 경로에 저장
+- 조회 시 ~~이미지 폴더~~ R2 버킷에 있는 이미지들에서 임베딩 추출해 현재 카메라에 잡힌 얼굴 임베딩과 비교 검증
